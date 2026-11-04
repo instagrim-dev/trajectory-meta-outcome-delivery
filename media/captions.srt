@@ -1,0 +1,116 @@
+1
+00:00:00,400 --> 00:00:03,835
+A customer requests records to understand data use.
+
+2
+00:00:04,100 --> 00:00:07,343
+Before delivery, the analyst's access is revoked.
+
+3
+00:00:08,600 --> 00:00:13,571
+Let's walk through delivering a no-code fix for this design bug in Trajectory.
+
+4
+00:00:15,200 --> 00:00:19,381
+Beyond a chat loop, decisions and checks make changes accountable.
+
+5
+00:00:20,200 --> 00:00:22,653
+Grounded in BMO's aggregate engine.
+
+6
+00:00:24,300 --> 00:00:27,628
+The owner reports the delivery problem in plain language.
+
+7
+00:00:29,100 --> 00:00:32,108
+The workbench reproduces the original delivery.
+
+8
+00:00:33,000 --> 00:00:35,901
+It will queue the request and revoke staff access.
+
+9
+00:00:38,100 --> 00:00:39,721
+The export still went out.
+
+10
+00:00:41,200 --> 00:00:42,864
+When should access be checked?
+
+11
+00:00:45,200 --> 00:00:47,611
+At request time, or at delivery time?
+
+12
+00:00:50,300 --> 00:00:54,332
+In a separate run, request time keeps the original authorization.
+
+13
+00:00:59,000 --> 00:01:01,539
+It records one audit and one export.
+
+14
+00:01:04,200 --> 00:01:07,208
+In another run, the owner selects delivery time.
+
+15
+00:01:10,300 --> 00:01:14,844
+Resolve delivery can synthesize, check, apply, and replay the change.
+
+16
+00:01:18,200 --> 00:01:21,187
+Next, a separate completed delivery-time run.
+
+17
+00:01:26,000 --> 00:01:29,691
+The independent checks cover revoked and authorized access.
+
+18
+00:01:36,100 --> 00:01:40,025
+They compare the original, an authored wrong fix, and the candidate.
+
+19
+00:01:44,000 --> 00:01:47,029
+The wrong fix releases records without an audit.
+
+20
+00:01:50,500 --> 00:01:53,487
+The Muse candidate satisfies both examples.
+
+21
+00:01:57,500 --> 00:02:01,681
+The policy blocks revoked access and orders audit before release.
+
+22
+00:02:06,200 --> 00:02:08,867
+The checked source was applied to the private run.
+
+23
+00:02:10,200 --> 00:02:13,784
+The replayed scenario blocked delivery with zero exports.
+
+24
+00:02:18,200 --> 00:02:21,891
+A separate authorized request is interrupted and recovered.
+
+25
+00:02:25,000 --> 00:02:27,731
+The audit remains saved during the interruption.
+
+26
+00:02:29,000 --> 00:02:32,648
+Recovery completes delivery once, with the audit preserved.
+
+27
+00:02:35,300 --> 00:02:39,097
+The receipt connects the decision, checks, and observed result.
+
+28
+00:02:41,200 --> 00:02:43,141
+The result is ready to review.
+
+29
+00:02:49,000 --> 00:02:52,456
+Your outcome. Your decision. Software you can verify.
+

@@ -1,0 +1,130 @@
+{
+  "baseline": {
+    "sha256": "149916c222ad2d19b52bfa554b5cf17a3884ec262f7741c40feb1a69ca6be6d2",
+    "build_exit": 0,
+    "build_stderr": "",
+    "cases": [
+      {
+        "name": "revoked",
+        "exit": 0,
+        "observed": {
+          "events": [
+            "audit",
+            "release"
+          ],
+          "status": "exported"
+        },
+        "expected": {
+          "status": "access_revoked",
+          "events": []
+        },
+        "satisfied": false,
+        "stderr": ""
+      },
+      {
+        "name": "authorized",
+        "exit": 0,
+        "observed": {
+          "events": [
+            "audit",
+            "release"
+          ],
+          "status": "exported"
+        },
+        "expected": {
+          "status": "exported",
+          "events": [
+            "audit",
+            "release"
+          ]
+        },
+        "satisfied": true,
+        "stderr": ""
+      }
+    ],
+    "verdict": "violated"
+  },
+  "wrong_fix": {
+    "sha256": "a12b92ba0f7812ca7a60aaf2ffb3bd7814c747c8612bd6fc9cd0f901a91084bb",
+    "build_exit": 0,
+    "build_stderr": "",
+    "cases": [
+      {
+        "name": "revoked",
+        "exit": 0,
+        "observed": {
+          "events": [],
+          "status": "access_revoked"
+        },
+        "expected": {
+          "status": "access_revoked",
+          "events": []
+        },
+        "satisfied": true,
+        "stderr": ""
+      },
+      {
+        "name": "authorized",
+        "exit": 0,
+        "observed": {
+          "events": [
+            "release"
+          ],
+          "status": "exported"
+        },
+        "expected": {
+          "status": "exported",
+          "events": [
+            "audit",
+            "release"
+          ]
+        },
+        "satisfied": false,
+        "stderr": ""
+      }
+    ],
+    "verdict": "violated"
+  },
+  "candidate": {
+    "sha256": "4677caae3a8bc91f6c6e1ce1ac5ddf373c1d7b615591be16d4c36b05be9f69ed",
+    "build_exit": 0,
+    "build_stderr": "",
+    "cases": [
+      {
+        "name": "revoked",
+        "exit": 0,
+        "observed": {
+          "events": [],
+          "status": "access_revoked"
+        },
+        "expected": {
+          "status": "access_revoked",
+          "events": []
+        },
+        "satisfied": true,
+        "stderr": ""
+      },
+      {
+        "name": "authorized",
+        "exit": 0,
+        "observed": {
+          "events": [
+            "audit",
+            "release"
+          ],
+          "status": "exported"
+        },
+        "expected": {
+          "status": "exported",
+          "events": [
+            "audit",
+            "release"
+          ]
+        },
+        "satisfied": true,
+        "stderr": ""
+      }
+    ],
+    "verdict": "satisfied"
+  }
+}

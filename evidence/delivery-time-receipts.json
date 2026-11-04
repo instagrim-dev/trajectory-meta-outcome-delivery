@@ -1,0 +1,373 @@
+[
+  {
+    "kind": "report_received",
+    "detail": {
+      "report": "A customer received records after access was revoked."
+    },
+    "created_at": "2026-11-03 19:51:31"
+  },
+  {
+    "kind": "request_queued",
+    "detail": {
+      "job_id": "39ae1f048a1a4861912201f7b567094e",
+      "label": "baseline reproduction",
+      "access_at_request": true
+    },
+    "created_at": "2026-11-03 19:51:54"
+  },
+  {
+    "kind": "access_revoked",
+    "detail": {
+      "job_id": "39ae1f048a1a4861912201f7b567094e"
+    },
+    "created_at": "2026-11-03 19:51:54"
+  },
+  {
+    "kind": "audit_persisted",
+    "detail": {
+      "job_id": "39ae1f048a1a4861912201f7b567094e"
+    },
+    "created_at": "2026-11-03 19:51:54"
+  },
+  {
+    "kind": "delivery_completed",
+    "detail": {
+      "job_id": "39ae1f048a1a4861912201f7b567094e"
+    },
+    "created_at": "2026-11-03 19:51:54"
+  },
+  {
+    "kind": "baseline_observed",
+    "detail": {
+      "job_id": "39ae1f048a1a4861912201f7b567094e",
+      "status": "exported",
+      "access_at_delivery": false,
+      "audit_count": 1,
+      "export_count": 1
+    },
+    "created_at": "2026-11-03 19:51:54"
+  },
+  {
+    "kind": "decision_recorded",
+    "detail": {
+      "decision": "delivery-time",
+      "protected": "audit before release"
+    },
+    "created_at": "2026-11-03 19:52:40"
+  },
+  {
+    "kind": "resolution_started",
+    "detail": {
+      "id": "48600869efbd46e294903f637676c061",
+      "state": "running",
+      "stage": "synthesis",
+      "decision": "delivery-time",
+      "baseline_job_id": "39ae1f048a1a4861912201f7b567094e",
+      "max_model_attempts": 1,
+      "model_attempts": 1
+    },
+    "created_at": "2026-11-03 19:52:57"
+  },
+  {
+    "kind": "generation_started",
+    "detail": {
+      "attempt_id": "411bdb4ddb9041bbb2c09345354b324b"
+    },
+    "created_at": "2026-11-03 19:52:57"
+  },
+  {
+    "kind": "generation_completed",
+    "detail": {
+      "attempt_id": "411bdb4ddb9041bbb2c09345354b324b",
+      "events_sha256": "970f2cb124e56d0b4a661b4d0b769118cbc83a617898d42150d0f8e2530f1802",
+      "elapsed_seconds": 5.499,
+      "process_exit_code": 0
+    },
+    "created_at": "2026-11-03 19:53:02"
+  },
+  {
+    "kind": "checks_started",
+    "detail": {},
+    "created_at": "2026-11-03 19:53:02"
+  },
+  {
+    "kind": "checks_completed",
+    "detail": {
+      "baseline": {
+        "sha256": "149916c222ad2d19b52bfa554b5cf17a3884ec262f7741c40feb1a69ca6be6d2",
+        "build_exit": 0,
+        "build_stderr": "",
+        "cases": [
+          {
+            "name": "revoked",
+            "exit": 0,
+            "observed": {
+              "events": [
+                "audit",
+                "release"
+              ],
+              "status": "exported"
+            },
+            "expected": {
+              "status": "access_revoked",
+              "events": []
+            },
+            "satisfied": false,
+            "stderr": ""
+          },
+          {
+            "name": "authorized",
+            "exit": 0,
+            "observed": {
+              "events": [
+                "audit",
+                "release"
+              ],
+              "status": "exported"
+            },
+            "expected": {
+              "status": "exported",
+              "events": [
+                "audit",
+                "release"
+              ]
+            },
+            "satisfied": true,
+            "stderr": ""
+          }
+        ],
+        "verdict": "violated"
+      },
+      "wrong_fix": {
+        "sha256": "a12b92ba0f7812ca7a60aaf2ffb3bd7814c747c8612bd6fc9cd0f901a91084bb",
+        "build_exit": 0,
+        "build_stderr": "",
+        "cases": [
+          {
+            "name": "revoked",
+            "exit": 0,
+            "observed": {
+              "events": [],
+              "status": "access_revoked"
+            },
+            "expected": {
+              "status": "access_revoked",
+              "events": []
+            },
+            "satisfied": true,
+            "stderr": ""
+          },
+          {
+            "name": "authorized",
+            "exit": 0,
+            "observed": {
+              "events": [
+                "release"
+              ],
+              "status": "exported"
+            },
+            "expected": {
+              "status": "exported",
+              "events": [
+                "audit",
+                "release"
+              ]
+            },
+            "satisfied": false,
+            "stderr": ""
+          }
+        ],
+        "verdict": "violated",
+        "origin": "authored control"
+      },
+      "candidate": {
+        "sha256": "4677caae3a8bc91f6c6e1ce1ac5ddf373c1d7b615591be16d4c36b05be9f69ed",
+        "build_exit": 0,
+        "build_stderr": "",
+        "cases": [
+          {
+            "name": "revoked",
+            "exit": 0,
+            "observed": {
+              "events": [],
+              "status": "access_revoked"
+            },
+            "expected": {
+              "status": "access_revoked",
+              "events": []
+            },
+            "satisfied": true,
+            "stderr": ""
+          },
+          {
+            "name": "authorized",
+            "exit": 0,
+            "observed": {
+              "events": [
+                "audit",
+                "release"
+              ],
+              "status": "exported"
+            },
+            "expected": {
+              "status": "exported",
+              "events": [
+                "audit",
+                "release"
+              ]
+            },
+            "satisfied": true,
+            "stderr": ""
+          }
+        ],
+        "verdict": "satisfied"
+      },
+      "response_origin": {
+        "kind": "synthesis_attempt",
+        "attempt_id": "411bdb4ddb9041bbb2c09345354b324b"
+      },
+      "model_events_sha256": "970f2cb124e56d0b4a661b4d0b769118cbc83a617898d42150d0f8e2530f1802",
+      "model_events_file": "muse-events.jsonl",
+      "checker_sha256": "41c596cf30e540dc74974f3bcafe27dbdac14713ef1564f91f35813ea6d0ecff",
+      "model": "meta-models/muse-spark-open-1026",
+      "provider": "meta",
+      "transport": "not attested by model event stream"
+    },
+    "created_at": "2026-11-03 19:53:04"
+  },
+  {
+    "kind": "resolution_running",
+    "detail": {
+      "id": "48600869efbd46e294903f637676c061",
+      "stage": "checking",
+      "model_events_sha256": "970f2cb124e56d0b4a661b4d0b769118cbc83a617898d42150d0f8e2530f1802",
+      "checker_sha256": "41c596cf30e540dc74974f3bcafe27dbdac14713ef1564f91f35813ea6d0ecff",
+      "candidate_sha256": "4677caae3a8bc91f6c6e1ce1ac5ddf373c1d7b615591be16d4c36b05be9f69ed"
+    },
+    "created_at": "2026-11-03 19:53:04"
+  },
+  {
+    "kind": "resolution_running",
+    "detail": {
+      "id": "48600869efbd46e294903f637676c061",
+      "stage": "application"
+    },
+    "created_at": "2026-11-03 19:53:04"
+  },
+  {
+    "kind": "candidate_applied",
+    "detail": {
+      "state": "applied",
+      "sha256": "4677caae3a8bc91f6c6e1ce1ac5ddf373c1d7b615591be16d4c36b05be9f69ed"
+    },
+    "created_at": "2026-11-03 19:53:04"
+  },
+  {
+    "kind": "resolution_running",
+    "detail": {
+      "id": "48600869efbd46e294903f637676c061",
+      "stage": "replay"
+    },
+    "created_at": "2026-11-03 19:53:04"
+  },
+  {
+    "kind": "request_queued",
+    "detail": {
+      "job_id": "2a3af929bd8b4f8ab16fa15dbce74312",
+      "label": "original journey replay",
+      "access_at_request": true
+    },
+    "created_at": "2026-11-03 19:53:04"
+  },
+  {
+    "kind": "access_revoked",
+    "detail": {
+      "job_id": "2a3af929bd8b4f8ab16fa15dbce74312"
+    },
+    "created_at": "2026-11-03 19:53:04"
+  },
+  {
+    "kind": "delivery_blocked",
+    "detail": {
+      "job_id": "2a3af929bd8b4f8ab16fa15dbce74312",
+      "reason": "access_revoked"
+    },
+    "created_at": "2026-11-03 19:53:04"
+  },
+  {
+    "kind": "replay_observed",
+    "detail": {
+      "job_id": "2a3af929bd8b4f8ab16fa15dbce74312",
+      "status": "access_revoked",
+      "access_at_delivery": false,
+      "audit_count": 0,
+      "export_count": 0
+    },
+    "created_at": "2026-11-03 19:53:04"
+  },
+  {
+    "kind": "resolution_completed",
+    "detail": {
+      "id": "48600869efbd46e294903f637676c061",
+      "stage": "replay",
+      "replay_job_id": "2a3af929bd8b4f8ab16fa15dbce74312"
+    },
+    "created_at": "2026-11-03 19:53:04"
+  },
+  {
+    "kind": "request_queued",
+    "detail": {
+      "job_id": "dd1fe0011c064ebaa0f362f492d608fc",
+      "label": "interrupted authorized delivery",
+      "access_at_request": true
+    },
+    "created_at": "2026-11-03 19:54:35"
+  },
+  {
+    "kind": "audit_persisted",
+    "detail": {
+      "job_id": "dd1fe0011c064ebaa0f362f492d608fc"
+    },
+    "created_at": "2026-11-03 19:54:35"
+  },
+  {
+    "kind": "attempt_failed",
+    "detail": {
+      "job_id": "dd1fe0011c064ebaa0f362f492d608fc",
+      "error": "Injected interruption after durable audit"
+    },
+    "created_at": "2026-11-03 19:54:35"
+  },
+  {
+    "kind": "recovery_started",
+    "detail": {
+      "job_id": "dd1fe0011c064ebaa0f362f492d608fc"
+    },
+    "created_at": "2026-11-03 19:55:08"
+  },
+  {
+    "kind": "audit_persisted",
+    "detail": {
+      "job_id": "dd1fe0011c064ebaa0f362f492d608fc"
+    },
+    "created_at": "2026-11-03 19:55:09"
+  },
+  {
+    "kind": "delivery_completed",
+    "detail": {
+      "job_id": "dd1fe0011c064ebaa0f362f492d608fc"
+    },
+    "created_at": "2026-11-03 19:55:09"
+  },
+  {
+    "kind": "recovery_completed",
+    "detail": {
+      "job_id": "dd1fe0011c064ebaa0f362f492d608fc",
+      "status": "exported",
+      "access_at_delivery": true,
+      "audit_count": 1,
+      "export_count": 1
+    },
+    "created_at": "2026-11-03 19:55:09"
+  }
+]
