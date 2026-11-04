@@ -1,6 +1,6 @@
 # Trajectory: owner-driven delivery — Meta hackathon
 
-This private judge packet centers on the Trajectory companion: a bounded records-delivery workflow that connects an owner’s decision to Muse-generated policy, independently controlled checks, application and replay. The native iOS workbench provides the interface.
+This submission centers on the Trajectory companion: a bounded records-delivery workflow that connects an owner’s decision to Muse-generated policy, independently controlled checks, application and replay. The native iOS workbench provides the interface.
 
 A records request is authorized and queued; staff access is revoked before delivery. The owner chooses whether authorization is determined at request time or delivery time. For delivery-time authorization, the retained run independently rejects the baseline and an authored wrong fix, accepts the Muse candidate, applies the checked source, and replays the scenario with zero exports after revocation. A separate request-time run produced one audit and one export; a separate authorized interrupted job recovered with one audit and one export.
 
@@ -28,4 +28,4 @@ For the native interface, run `python3 native_bridge.py --workspace /path/to/new
 
 The Meta-specific companion slice, checks, replay, recovery and receipts are the entry. The native workbench and BMO research are antecedents; the earlier public Trajectory repository is https://github.com/instagrim-dev/trajectory-nebius. The inherited workbench’s earlier provider-specific documentation describes its original submission and must not be confused with this Meta run. The checker covers the demonstrated examples; it does not establish general privacy compliance or production deployment.
 
-Keep this repository private and share it only with authorized judges.
+The earlier workbench is provided separately from the event-specific companion to make the contribution boundary clear.

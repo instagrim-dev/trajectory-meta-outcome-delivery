@@ -1,6 +1,6 @@
-# Trajectory: private outcome-owned delivery slice
+# Trajectory: outcome-owned delivery slice
 
-**Private work in progress. Publication and submission are on hold.** This self-contained synthetic records-export demonstration accompanies issue #2. It separates an owner decision, bounded Muse-generated policy, host-owned checks, private application, replay and a readable receipt. Request-time keeps an originally authorized request, while delivery-time requires current access. Both preserve the audit-before-release obligation; for the observed request-time case the existing source needs no change. The inherited Trajectory iOS application is not part of this source tree; a separate private developer handoff contains it.
+This self-contained synthetic records-export demonstration accompanies issue #2. It separates an owner decision, bounded Muse-generated policy, host-owned checks, private application, replay and a readable receipt. Request-time keeps an originally authorized request, while delivery-time requires current access. Both preserve the audit-before-release obligation; for the observed request-time case the existing source needs no change. The inherited Trajectory iOS application is not part of this source tree; the accompanying native-workbench directory contains it.
 
 ## Reproduce with retained evidence
 
@@ -30,4 +30,4 @@ This path observes one audit and one export for the originally authorized reques
 
 The programmatic `Flow.resolve()` path and native bridge can invoke the configured Meta Muse model through Baseten with `BASETEN_API_KEY` available in the environment. A fresh attempt can incur provider cost. Start the loopback bridge with `python3 native_bridge.py --workspace /path/to/new/private-workspace`; the separately maintained native app uses it. The `guide --synthesize` command also invokes fresh generation. The runner passes the key via standard input and retains redacted output and the synthetic prompt in the private workspace.
 
-The supplied checks cover two examples, not all possible behaviors. The demo does not establish production compliance, a human participant trial, event eligibility or a submission. Do not publish this tree while the hold remains active. See `PROVENANCE.md` for the source boundary.
+The supplied checks cover two examples, not all possible behaviors. The demo does not establish production compliance. See `PROVENANCE.md` for the source boundary.
