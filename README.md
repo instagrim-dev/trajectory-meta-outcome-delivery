@@ -29,3 +29,7 @@ For the native interface, run `python3 native_bridge.py --workspace /path/to/new
 The Meta-specific companion slice, checks, replay, recovery and receipts are the entry. The native workbench and BMO research are antecedents; the earlier public Trajectory repository is https://github.com/instagrim-dev/trajectory-nebius. The inherited workbench’s earlier provider-specific documentation describes its original submission and must not be confused with this Meta run. The checker covers the demonstrated examples; it does not establish general privacy compliance or production deployment.
 
 The earlier workbench is provided separately from the event-specific companion to make the contribution boundary clear.
+
+## License
+
+The Meta companion source and documentation are available under the [MIT License](LICENSE). The inherited native workbench retains its own license.
